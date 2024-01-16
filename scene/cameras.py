@@ -38,7 +38,7 @@ class Camera(nn.Module):
 
         self.original_image = None
         self.image_width = 1280
-        self.image_height = 1280
+        self.image_height = 1280*2
         if image is not None:
             self.original_image = image.clamp(0.0, 1.0).to(self.data_device)
             self.image_width = self.original_image.shape[2]
